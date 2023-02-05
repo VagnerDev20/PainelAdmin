@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="SIGMA SISTEMA DE VENDAS">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>PAINEL PRINCIAPL</title>
+</head>
+<body>
+    <header id="header"><!--cabeçalho-->
+        <div class="imgMoney"><img id="imgMoney_id" src="img/simbolo-do-dolar.png" alt="imagem dolar" width="40px"></div>
+        <div class="imgLogin"><img id="imgLogin_id" src="img/user.png" alt="imagem usuario" width="40px"></div>
+        <div class="imgConfig"><img id="imgConfig_id" src="img/configuracoes.png" alt="imagem configuracoes" width="40px"></div>
+    </header>
+
+    <menu>
+        <nav id="nav">
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">MENU<span id="hamburger"></span></button> <!--botao menu-->
+            <!--menu lateral-->
+            <ul id="menu" role="menu">
+                  
+                <li class="menulista"><a href="/">HOME</a></li>
+                <li class="menulista"><a href="/">LOJA</a></li>
+                <img id="myBtn" class="imgCadastro" src="img/application.png" alt="img_dropdown" width="20px">
+                <li class="CorSubMenu"><div id="SubCadastro"><span>CADASTROS</span></div>
+                    <!--submenu-->
+                    <div  id="myDropdown" class="dropdown">
+                        <ul>
+                            <li><a href="/" class="submenu">USUÁRIOS</a></li>
+                            <li><a href="/" class="submenu">FREQUÊNCIA</a></li>
+                            <li><a href="/" class="submenu">GRUPOS</a></li>
+                            <li><a href="/" class="submenu">ACESSOS</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <script src="js/dropdown.js"></script>
+ 
+                <li class="menulista"><a href="/">CADASTRO</a></li>
+            </ul>
+        </nav>
+    </menu>
+    <script src="js/script.js"></script>
+ 
+</body>
+</html>

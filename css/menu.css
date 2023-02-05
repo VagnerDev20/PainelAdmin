@@ -1,0 +1,217 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+.imgMoney{
+    position: absolute;
+    top: 29px;
+    left: 160px;
+    cursor: pointer;
+}
+
+.imgLogin{
+    position: absolute;
+    top: 29px;
+    left: 215px;
+    cursor: pointer;
+}
+.imgConfig{
+    position: absolute;
+    top: 29px;
+    left: 270px;
+    cursor: pointer;
+}
+
+/* menu principal */
+#menu{
+
+    position: absolute;
+    top: 100px;
+    height: calc(100vh - 100px);
+    width: 300px;
+    background-image: linear-gradient(#0401b6, #00aeff);
+    box-sizing: border-box;
+    z-index: 1000;
+    transition: 0.9s; 
+    width: 0; /* esconder backgroud */
+    visibility: hidden; /* esconde menu*/
+    overflow-y: hidden; /* eixo y esconde */
+
+}
+
+/* aparecer menu */
+#nav.active #menu {
+    transition: 0.9s;
+    width: 300px;
+    visibility: visible; /* aparece menu*/
+    overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
+}
+
+.menulista a {
+    display: block;
+    width: 150px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    margin-left: 15px;
+
+}
+  
+.menulista a:hover {
+    background-color: #eba2f8;
+    transition: 0.3s;
+    color: #000000;
+}
+
+
+/* menu dropdown*/
+
+.submenu{
+    display: block;
+    font-size: 0.9rem;
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f8f9f7;
+    padding: 5px 15px;
+    width: 135px;
+    border-radius: 10px;
+}
+.CorSubMenu a:hover {
+    background-color: #eba2f8;
+    transition: 0.3s;
+    color: #000000;
+}
+.CorSubMenu span{
+
+    display: block;
+    width: 150px;
+    padding: 10px 10px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+.CorSubMenu span:hover {
+    background-color: #eba2f8;
+    transition: 0.3s;
+    color: #000000;
+}
+
+#SubCadastro span{
+    display: flex;
+}
+/* botao submenu*/
+#menu .imgCadastro{
+    position: absolute;
+    top: 91px;
+    z-index: 4000;
+    left: 190px;
+    cursor: pointer;
+}
+
+.dropdown{
+    display: none;
+}
+.show {
+    display:block;
+}
+/* Fim menu dropdown*/
+
+#btn-mobile {
+    position: absolute;
+    top: 30px;
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    color: #ffffff;
+    z-index: 2000;
+    margin-left: 10px;
+
+}
+    /* criando o botao amburguer */
+#hamburger {
+    border-top: 2px solid;
+    width: 20px;
+    color: rgb(255, 255, 255);
+    z-index: 2000;
+    margin-left: 15px;
+}
+#hamburger::after,
+#hamburger::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    transition: 0.3s;
+    position: relative;
+}
+    
+    /* criando o x */
+#nav.active #hamburger {
+    border-top-color: transparent;
+}
+#nav.active #hamburger::before {
+    transform: rotate(135deg);
+}
+#nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+}
+
+ /* responsivo*/
+@media(max-width:500px){
+    #nav.active #menu {
+        width: 250px;  
+    }
+}
+
+@media(max-width:400px){
+    #nav.active #menu {
+        width: 200px;  
+    }
+
+    #menu .imgCadastro{
+        left: 160px;
+    }
+}
+
+@media(max-width:330px){
+
+    #imgMoney_id{
+        width: 30px;
+    }
+
+    #imgLogin_id{
+        width: 30px;
+    }
+    #imgConfig_id{
+        width: 30px;
+    }
+
+    .imgMoney{
+        left: 150px;
+    }
+    
+    .imgLogin{
+        left: 195px;
+    }
+    .imgConfig{
+        left: 240px;
+    }
+}
+
+

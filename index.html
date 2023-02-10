@@ -1,34 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="SIGMA SISTEMA DE VENDAS">
 
-    <link rel="stylesheet" href="css/style.css">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="SIGMA SISTEMA DE VENDAS" />
+    <link rel="icon" type="image/png" href="img/sigma.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>PAINEL PRINCIAPL</title>
 </head>
+
 <body>
-    <header id="header"><!--cabeçalho-->
-        <div class="imgMoney"><img id="imgMoney_id" src="img/simbolo-do-dolar.png" alt="imagem dolar" width="40px"></div>
-        <div class="imgLogin"><img id="imgLogin_id" src="img/user.png" alt="imagem usuario" width="40px"></div>
-        <div class="imgConfig"><img id="imgConfig_id" src="img/configuracoes.png" alt="imagem configuracoes" width="40px"></div>
+    <!--cabeçalho-->
+    <header id="header">
+        <!--icone money-->
+        <div>
+            <img id="imgMoney" src="img/simbolo-do-dolar.png" alt="imagem dolar" width="40px" />
+        </div>
+
+        <!--icone user-->
+        <img id="imgLogin" src="img/perfil/sem-foto.png" alt="imagem usuario" width="40px" />
+        <div id="NomeUser" class="NomeUsuario">
+            <div>
+                <p>NOME USUARIO</p>
+            </div>
+            <div><span>NIVEL USUARIO</span></div>
+        </div>
+
+        <!--botao dropdown-->
+        <div class="dropdownUser">
+            <img class="btnUser" id="dropdown-icon" src="img/downblack.svg" alt="" width="30px" />
+
+            <div class="dropdown-content">
+                <div><span class="btnAdminConfig">CONFIGURAÇÃO</span></div>
+                <div><span class="btnAdminPerfil">PERFIL</span></div>
+                <a href="">SAIR</a>
+            </div>
+
+            <script src="js/dropdownUser.js"></script>
+        </div>
     </header>
 
     <menu>
         <nav id="nav">
-            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">MENU<span id="hamburger"></span></button> <!--botao menu-->
+            <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
+                aria-expanded="false">
+                MENU<span id="hamburger"></span>
+            </button>
+            <!--botao menu-->
             <!--menu lateral-->
             <ul id="menu" role="menu">
-                  
-                <li class="menulista"><a href="/">HOME</a></li>
-                <li class="menulista"><a href="/">LOJA</a></li>
-                <img id="myBtn" class="imgCadastro" src="img/application.png" alt="img_dropdown" width="20px">
-                <li class="CorSubMenu"><div id="SubCadastro"><span>CADASTROS</span></div>
+                <li class="menulista"><a href="">HOME</a></li>
+                <li class="menulista"><a href="">LOJA</a></li>
+
+                <li class="CorSubMenu">
+                    <div><span id="myBtn">CADASTROS</span></div>
+
                     <!--submenu-->
-                    <div  id="myDropdown" class="dropdown">
+                    <div id="myDropdown" class="dropdown">
                         <ul>
                             <li><a href="/" class="submenu">USUÁRIOS</a></li>
                             <li><a href="/" class="submenu">FREQUÊNCIA</a></li>
@@ -38,12 +70,84 @@
                     </div>
                 </li>
                 <script src="js/dropdown.js"></script>
- 
+
                 <li class="menulista"><a href="/">CADASTRO</a></li>
             </ul>
         </nav>
     </menu>
     <script src="js/script.js"></script>
- 
+
+
+
+
+    <!--formulario configurações-->
+    <form action="">
+        <div class="modalConfig">
+            <fieldset class="fieldConfig">
+                <legend>EDITAR CONFIGURAÇÃO</legend>
+
+                <label for="nome_sistema">NOME DO SISTEMA</label>
+                <input id="nome_sistema" type="text" name="nome_sistema" placeholder="NOME DO SISTEMA" />
+
+                <label for="email_sistema">EMAIL DO SISTEMA</label>
+                <input id="email_sistema" type="email" name="email_sistema" placeholder="EMAIL DO SISTEMA" />
+
+                <label for="telefone_sistema">TELEFONE DO SISTEMA</label>
+                <input id="telefone_sistema" type="text" name="telefone_sistema" placeholder="TELEFONE DO SISTEMA" />
+
+                <div>
+                    <label for="">TIPO DE RELATORIO</label>
+                    <select class="form-control" name="tipo_rel">
+                        <option value="PDF">PDF</option>
+                        <option value="HTML">HTML</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label>LOGO (*PNG)</label>
+                    <input type="file" name="foto-logo" onChange="carregarImgLogo();" id="foto-logo" />
+                </div>
+
+                <div>
+                    <div id="divImg" style="background: #dbdbdb">
+                        <img src="../img/logo.png" width="80px" id="target-logo" />
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label>ICONE (*Png)</label>
+                        <input type="file" name="foto-icone" onChange="carregarImgIcone();" id="foto-icone" />
+                    </div>
+                </div>
+
+                <div>
+                    <div id="divImg">
+                        <img src="../img/icone.png" width="50px" id="target-icone" />
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label>LOGO RELATORIO (*Jpg)</label>
+                        <input type="file" name="foto-logo-rel" onChange="carregarImgLogoRel();" id="foto-logo-rel" />
+                    </div>
+                </div>
+
+                <div>
+                    <div id="divImg">
+                        <img src="../img/logo-rel.jpg" width="80px" id="target-logo-rel" />
+                    </div>
+                </div>
+
+                <div><button type="submit">SALVAR</button></div>
+            </fieldset>
+        </div>
+        <script src="js/btnAdminConfig.js"></script>
+    </form>
+
+
+
 </body>
+
 </html>

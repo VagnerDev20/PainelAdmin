@@ -1,0 +1,44 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+}
+
+.modalConfig{
+
+    display: none;
+    position: absolute;
+    top: 130px;
+    background-color: #f9f9f9;
+    width: 800px;
+    height: 500px;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+    transform: translateY(-10px);
+    opacity: 0;
+    left: 400px;
+}
+.btnAdminConfig{
+
+    cursor: pointer;
+
+}
+
+.fieldConfig{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.modalConfig.show{
+
+    display: block;
+    transform: translateY(0);
+    opacity: 1;
+   
+}

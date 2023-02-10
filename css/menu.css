@@ -6,26 +6,6 @@
     box-sizing: border-box;
 }
 
-.imgMoney{
-    position: absolute;
-    top: 29px;
-    left: 160px;
-    cursor: pointer;
-}
-
-.imgLogin{
-    position: absolute;
-    top: 29px;
-    left: 215px;
-    cursor: pointer;
-}
-.imgConfig{
-    position: absolute;
-    top: 29px;
-    left: 270px;
-    cursor: pointer;
-}
-
 /* menu principal */
 #menu{
 
@@ -105,24 +85,22 @@
     color: #000000;
 }
 
-#SubCadastro span{
-    display: flex;
-}
-/* botao submenu*/
-#menu .imgCadastro{
-    position: absolute;
-    top: 91px;
-    z-index: 4000;
-    left: 190px;
-    cursor: pointer;
-}
-
 .dropdown{
-    display: none;
+    transition: 0.9s; 
+    height: 0; /* esconder backgroud */
+    visibility: hidden; /* esconde menu*/
+    overflow-y: hidden; /* eixo y esconde */
+    
 }
 .show {
-    display:block;
+    transition: 0.9s;
+    height: 120px;
+    visibility: visible; /* aparece menu*/
+    overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
 }
+
+  
+
 /* Fim menu dropdown*/
 
 #btn-mobile {
@@ -182,35 +160,6 @@
 @media(max-width:400px){
     #nav.active #menu {
         width: 200px;  
-    }
-
-    #menu .imgCadastro{
-        left: 160px;
-    }
-}
-
-@media(max-width:330px){
-
-    #imgMoney_id{
-        width: 30px;
-    }
-
-    #imgLogin_id{
-        width: 30px;
-    }
-    #imgConfig_id{
-        width: 30px;
-    }
-
-    .imgMoney{
-        left: 150px;
-    }
-    
-    .imgLogin{
-        left: 195px;
-    }
-    .imgConfig{
-        left: 240px;
     }
 }
 

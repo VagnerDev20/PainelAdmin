@@ -7,77 +7,89 @@
 }
 
 .modalConfig {
-
-    display: none;
     position: absolute;
-    top: 130px;
+    box-sizing: border-box;
+    height: calc(100vh - 230px);
+    width: calc(100vw - 600px);
+    box-sizing: border-box;
     background-color: #f9f9f9;
-    width: 880px;
-    height: 70vh;
     box-shadow: 0px 8px 16px 0px #00000033;
-    z-index: 1;
-    transition: all 0.3s ease-out;
-    transform: translateY(-10px);
-    opacity: 0;
-    left: 400px;
+    left: 300px;
+    top: 110px;
+    border: none;
+    border-radius: 50px;
 }
 
 .btnAdminConfig {
-
     cursor: pointer;
-
 }
-
-.modalConfig.show {
-
-    display: block;
-    transform: translateY(0);
-    opacity: 1;
-
-}
-
-/* formulario de configuração */
 
 .modal-title {
-    box-sizing: border-box;
-    display: block;
     width: 100%;
-    background-color: #d6d6d6;
     text-align: center;
+    box-sizing: border-box;
+    background-color: #d6d6d6;
     padding: 15px;
-
 }
 
 .block_1 {
     display: grid;
-    flex: 1;
-    /* todas as caixas fica com o mesmo tamanho*/
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    gap: 10px;
+}
 
-    grid-template-areas: "divNome divEmail divTelefone divRelatorio";
-    /*grid-template-rows: 100px; tamanho das linhas*/
+.block_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
 
-    /* definindo o tamanho das colunas*/
-    grid-template-columns: 220px 220px 220px 220px;
+.block_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.block_4 {
+    display: grid;
+    margin: 10px;
+    font-size: 0.8rem;
+}
+
+.divMensagem input {
+    box-sizing: border-box;
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    font-size: 0.7rem;
+}
+
+.block_5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    gap: 10px;
 }
 
 #nome_sistema {
     padding: 5px;
     width: 100%;
+    font-size: 0.7rem;
 }
 
 .labelNome {
     margin-bottom: 5px;
     width: 100%;
+    font-size: 0.8rem;
 }
 
 .divNome {
     margin: 10px;
 }
 
-
 #email_sistema {
     padding: 5px;
     width: 100%;
+    font-size: 0.7rem;
 }
 
 .divEmail {
@@ -87,19 +99,20 @@
 .labelEmail {
     width: 100%;
     margin-bottom: 5px;
-
+    font-size: 0.8rem;
 }
 
 
 #telefone_sistema {
     padding: 5px;
     width: 100%;
+    font-size: 0.7rem;
 }
 
 .labelTelefone {
     width: 100%;
     margin-bottom: 5px;
-
+    font-size: 0.8rem;
 }
 
 .divTelefone {
@@ -110,191 +123,129 @@
 .form-control {
     padding: 5px;
     width: 100%;
+    font-size: 0.7rem;
 }
 
 .labelRelatorio {
     width: 100%;
     margin-bottom: 5px;
-
+    font-size: 0.8rem;
 }
 
 .divRelatorio {
     margin: 10px;
 }
 
-
-.block_2 {
-    display: grid;
-    flex: 1;
-    /* todas as caixas fica com o mesmo tamanho*/
-
-    grid-template-areas: "divLogo divIcone divLogoRel";
-    /*grid-template-rows: 100px; tamanho das linhas*/
-
-    /* definindo o tamanho das colunas*/
-    grid-template-columns: 290px 290px 290px;
-}
-
-.divLogo {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 30px;
-
-}
-
-#foto-logo {
-    font-size: 0.7rem;
-}
-
-.divIcone {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 30px;
-
-}
-
-#foto-icone {
-    font-size: 0.7rem;
-}
-
-.divLogoRel {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-left: 30px;
-
-
-}
-
-#foto-logo-rel {
-    font-size: 0.7rem;
-}
-
-.block_3 {
-    display: grid;
-    flex: 1;
-    /* todas as caixas fica com o mesmo tamanho*/
-
-    grid-template-areas: "divLogoImg divIconeImg divLogoRelImg";
-    /*grid-template-rows: 100px; tamanho das linhas*/
-
-    /* definindo o tamanho das colunas*/
-    grid-template-columns: 290px 290px 290px;
-}
-
-.divLogoImg {
-
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 30px;
-
-}
-
-.divIconeImg {
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 30px;
-}
-
-.divLogoRelImg {
-    text-align: center;
-    border-radius: 20px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 30px;
-}
-
-
-.divMensagem {
-    display: block;
-    width: 100%;
-}
-
-.divMensagem input {
-    box-sizing: border-box;
-    width: 860px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 5px;
-}
-
-.labelMensagem {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.block_5 {
-    display: grid;
-    flex: 1;
-
-    grid-template-areas: "divDiasBlo divTestarsis divDiasTeste divToken";
-    /*grid-template-rows: 100px; tamanho das linhas*/
-    grid-template-columns: 220px 220px 220px 220px;
-}
-
 .divDiasBlo {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .divTestarsis {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 10px;
 }
 
 .divDiasTeste {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .divToken {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
+
 .labelDiasBlo {
-    width: 100%;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
 }
 
 #dias_bloqueio {
-    width: 100%;
     padding: 5px;
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .labelTestarsis {
-    width: 100%;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
 }
 
 .divTestarsis select {
 
-    width: 100%;
     padding: 5px;
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .labelDiasTeste {
-    width: 100%;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
 }
 
 #dias_teste {
-    width: 100%;
     padding: 5px;
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 5px;
 }
 
 .labelToken {
-    width: 100%;
+    margin-bottom: 5px;
+    font-size: 0.8rem;
 }
 
 #token {
-    width: 100%;
     padding: 5px;
+    font-size: 0.7rem;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.divLogo label {
+    margin: 10px;
+}
+
+.divLogo input {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.divIcone label {
+    margin: 10px;
+}
+
+.divIcone input {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.divLogoRel label {
+    margin: 10px;
+}
+
+.divLogoRel input {
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.divLogoImg {
+
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.divIconeImg {
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.divLogoRelImg {
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .divSalvarConfig {
@@ -311,7 +262,7 @@
     cursor: pointer;
     background-color: #0401b6;
     color: white;
-    margin-top: 5px;
+    margin-top: 15px;
 }
 
 .divSalvarConfig button:hover {
@@ -319,70 +270,9 @@
     transition: 0.3s;
     color: #000000;
 }
-
-@media(max-width: 1300px) {
-    .modalConfig {
-        left: 320px;
-    }
-}
-
-@media(max-width: 1220px) {
-    .modalConfig {
-        overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
-        width: 460px;
-    }
-
-    .block_1 {
-
-        grid-template-areas: "divNome divEmail" "divTelefone divRelatorio";
-        grid-template-columns: 220px 220px;
-    }
-
-    .block_2 {
-        grid-template-areas: "divLogo" "divIcone" "divLogoRel";
-        grid-template-columns: 290px;
-    }
-
-    .block_3 {
-        grid-template-areas: "divLogoImg" "divIconeImg" "divLogoRelImg";
-        grid-template-columns: 150px;
-    }
-
-    .block_5 {
-        grid-template-areas: "divDiasBlo divTestarsis" "divDiasTeste divToken";
-        grid-template-columns: 220px 220px;
-    }
-
-    
-
-    .divMensagem input {
-        width: 420px;
-    }
-
-    #target-logo{
-        position: absolute;
-        top: 410px;
-        left: 300px;
-        width: 50px;
-    }
-
-    #target-icone{
-        position: absolute;
-        top: 485px;
-        left: 300px;
-        width: 50px;
-    }
-
-    #target-logo-rel{
-        position: absolute;
-        top: 555px;
-        left: 300px;
-        width: 50px;
-    }
-
-    .divSalvarConfig{
-        position: absolute;
-        top: 625px;
-    }
-
+.imgFechar{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 50px;
 }

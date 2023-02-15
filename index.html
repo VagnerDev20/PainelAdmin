@@ -77,144 +77,152 @@
     </menu>
     <script src="js/script.js"></script>
 
-    
+
     <!--formulario configurações-->
-    <dialog class="modalConfig">
-        <form action="">
 
-            <div class="modal-title">
-                <legend>EDITAR CONFIGURAÇÃO</legend>
+    <form action="" class="modalConfig">
+
+        <div class="modal-title">
+            <legend>EDITAR CONFIGURAÇÃO</legend>
+        </div>
+
+        <div>
+            <img src="img/fechar.png" width="30px" class="imgFechar" />
+        </div>
+
+        <div class="block_1">
+
+            <div class="divNome">
+                <div class="labelNome"><label for="nome_sistema">NOME DO SISTEMA</label></div>
+                <input id="nome_sistema" type="text" name="nome_sistema" placeholder="NOME DO SISTEMA" required />
             </div>
 
-            <div>
-                <img src="img/fechar.png" width="30px" class="imgFechar" />
+
+            <div class="divEmail">
+                <div class="labelEmail"><label for="email_sistema">EMAIL DO SISTEMA</label></div>
+                <input id="email_sistema" type="email" name="email_sistema" placeholder="EMAIL DO SISTEMA"
+                    autocomplete="email" required />
             </div>
-    
-            <div class="block_1">
-    
-                <div class="divNome">
-                    <div class="labelNome"><label for="nome_sistema">NOME DO SISTEMA</label></div>
-                    <input id="nome_sistema" type="text" name="nome_sistema" placeholder="NOME DO SISTEMA" required />
-                </div>
-                
-    
-                <div class="divEmail">
-                    <div class="labelEmail"><label for="email_sistema">EMAIL DO SISTEMA</label></div>
-                    <input id="email_sistema" type="email" name="email_sistema" placeholder="EMAIL DO SISTEMA" autocomplete="email" required />
-                </div>
-                
-    
-                <div class="divTelefone">
-                    <div class="labelTelefone"><label for="telefone_sistema">TEL. DO SISTEMA</label></div>
-                    <input id="telefone_sistema" type="text" name="telefone_sistema" placeholder="N° TELEFONE" required />
-                </div>
-                
-    
-                <div class="divRelatorio">
-                    <div class="labelRelatorio"><label for="">TIPO RELATORIO</label></div>
-                    <select class="form-control" name="tipo_rel">
-                        <option value="PDF">PDF</option>
-                        <option value="HTML">HTML</option>
-                    </select>
-                </div>
-    
+
+
+            <div class="divTelefone">
+                <div class="labelTelefone"><label for="telefone_sistema">TEL. DO SISTEMA</label></div>
+                <input id="telefone_sistema" type="text" name="telefone_sistema" placeholder="N° TELEFONE" required />
             </div>
-    
-            <div class="block_4">
-    
-                <div class="divMensagem">
-                    <div class="labelMensagem"><label for="msg_bloqueio">MENSAGEM DE BLOQUEIO</label></div>
-                    <input type="text" name="msg_bloqueio" id="msg_bloqueio"  placeholder="Reguralize sua mensalidade, seu acesso ao sistema será bloqueado!" required />
-                </div>
-    
+
+
+            <div class="divRelatorio">
+                <div class="labelRelatorio"><label for="">TIPO RELATORIO</label></div>
+                <select class="form-control" name="tipo_rel">
+                    <option value="PDF">PDF</option>
+                    <option value="HTML">HTML</option>
+                </select>
             </div>
-    
-            <div class="block_5">
-    
-                <div class="divDiasBlo">
-                    <div class="labelDiasBlo"><label for="dias_bloqueio">DIAS BLOQUEIO</label></div>
-                    <input id="dias_bloqueio" type="number" name="dias_bloqueio" placeholder value="3" required />
-                </div>
-    
-                <div class="divTestarsis">
-                    <div class="labelTestarsis"><label for="">TESTAR SISTEMA</label></div>
-                    <select name="teste">
-                        <option value="SIM">SIM</option>
-                        <option value="NAO">NAO</option>
-                    </select>
-                </div>
-    
-                <div class="divDiasTeste">
-                    <div class="labelDiasTeste"><label for="dias_teste">DIAS TESTE</label></div>
-                    <input id="dias_teste" type="number" name="dias_teste" placeholder value="3" required />
-                </div>
-    
-                <div class="divToken">
-                    <div class="labelToken"><label>TOKEN API</label></div>
-                    <input type="text" name="token" id="token"  placeholder="Token Whatsapp" required />
-                </div>
-    
-    
+
+        </div>
+
+        <div class="block_4">
+
+            <div class="divMensagem">
+                <div class="labelMensagem"><label for="msg_bloqueio">MENSAGEM DE BLOQUEIO</label></div>
+                <input type="text" name="msg_bloqueio" id="msg_bloqueio"
+                    placeholder="Reguralize sua mensalidade, seu acesso ao sistema será bloqueado!" required />
             </div>
-    
-            <div class="block_2">
-    
-                <div class="divLogo">
-                    <div><label>LOGO (*PNG)</label></div>
-                    <input type="file" name="foto-logo" onChange="carregarImgLogo();" id="foto-logo" />
-                </div>
-            
-                <div class="divIcone">
-                    <div><label>ICONE (*Png)</label></div>
-                    <input type="file" name="foto-icone" onChange="carregarImgIcone();" id="foto-icone" />
-                </div>
-                
-                <div class="divLogoRel">
-                    <div><label>LOGO RELATORIO (*Jpg)</label></div>
-                    <input type="file" name="foto-logo-rel" onChange="carregarImgLogoRel();" id="foto-logo-rel" />
-                </div>
-    
+
+        </div>
+
+        <div class="block_5">
+
+            <div class="divDiasBlo">
+                <div class="labelDiasBlo"><label for="dias_bloqueio">DIAS BLOQUEIO</label></div>
+                <input id="dias_bloqueio" type="number" name="dias_bloqueio" placeholder value="3" required />
             </div>
-    
-    
-            <div class="block_3">
-    
-                <div class="divLogoImg" style="background: #dbdbdb">
-                    <img src="img/sigma.png" width="80px" id="target-logo" />
-                </div>
-    
-                <div class="divIconeImg" style="background: #dbdbdb">
-                    <img src="img/sigma.png" width="80px" id="target-icone" />
-                </div>
-                
-                <div class="divLogoRelImg" style="background: #dbdbdb">
-                    <img src="img/sigma.png" width="80px" id="target-logo-rel" />
-                </div>
-                
+
+            <div class="divTestarsis">
+                <div class="labelTestarsis"><label for="">TESTAR SISTEMA</label></div>
+                <select name="teste">
+                    <option value="SIM">SIM</option>
+                    <option value="NAO">NAO</option>
+                </select>
             </div>
-    
-            <div class="divSalvarConfig">
-                <button type="submit">SALVAR</button>
+
+            <div class="divDiasTeste">
+                <div class="labelDiasTeste"><label for="dias_teste">DIAS TESTE</label></div>
+                <input id="dias_teste" type="number" name="dias_teste" placeholder value="3" required />
             </div>
-    
-    
-            <script>
-                const button1 = document.querySelector('.btnAdminConfig');
-                const modal1 = document.querySelector('.modalConfig');
-                const buttonClose = document.querySelector('.modalConfig .imgFechar');
-        
-                button1.onclick = function() {
-                    modal1.showModal()
+
+            <div class="divToken">
+                <div class="labelToken"><label>TOKEN API</label></div>
+                <input type="text" name="token" id="token" placeholder="Token Whatsapp" required />
+            </div>
+
+
+        </div>
+
+        <div class="block_2">
+
+            <div class="divLogo">
+                <div><label>LOGO (*PNG)</label></div>
+                <input type="file" name="foto-logo" onChange="carregarImgLogo();" id="foto-logo" />
+            </div>
+
+            <div class="divIcone">
+                <div><label>ICONE (*Png)</label></div>
+                <input type="file" name="foto-icone" onChange="carregarImgIcone();" id="foto-icone" />
+            </div>
+
+            <div class="divLogoRel">
+                <div><label>LOGO RELATORIO (*Jpg)</label></div>
+                <input type="file" name="foto-logo-rel" onChange="carregarImgLogoRel();" id="foto-logo-rel" />
+            </div>
+
+        </div>
+
+
+        <div class="block_3">
+
+            <div class="divLogoImg" style="background: #dbdbdb">
+                <img src="img/sigma.png" width="80px" id="target-logo" />
+            </div>
+
+            <div class="divIconeImg" style="background: #dbdbdb">
+                <img src="img/sigma.png" width="80px" id="target-icone" />
+            </div>
+
+            <div class="divLogoRelImg" style="background: #dbdbdb">
+                <img src="img/sigma.png" width="80px" id="target-logo-rel" />
+            </div>
+
+        </div>
+
+        <div class="divSalvarConfig">
+            <button type="submit">SALVAR</button>
+        </div>
+
+        <script>
+            document.addEventListener("keydown", function (event) {
+                if (event.key === "Escape") {
+                    // Adicione aqui o código para fechar o formulário
+                    const element = document.querySelector('.modalConfig');
+                    element.classList.toggle('show');
                 }
+            });
 
-                buttonClose.onclick = function() {
-                    modal1.close()
-                }
-            </script>
+        </script>
 
-        </form>
+        <script>
 
-    </dialog>
+            const btnAdminConfig = document.querySelector('.btnAdminConfig');
+            const modalConfig = document.querySelector('.modalConfig');
+
+            btnAdminConfig.addEventListener('click', () => {
+                modalConfig.classList.toggle('show');
+            });
+        </script>
+
+    </form>
+
+
 
 </body>
 

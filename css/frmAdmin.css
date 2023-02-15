@@ -1,23 +1,18 @@
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0px;
-    padding: 0px;
-    outline: 0px;
-    box-sizing: border-box;
+.modalConfig{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  width: 90vw;
+  font-size: 0.9rem;
+  background-color: #e4e4e4;
+  border-radius: 20px;
+  z-index: 2;
+  overflow: auto;
 }
-
-.modalConfig {
-    position: absolute;
-    box-sizing: border-box;
-    height: calc(100vh - 230px);
-    width: calc(100vw - 600px);
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    box-shadow: 0px 8px 16px 0px #00000033;
-    left: 300px;
-    top: 110px;
-    border: none;
-    border-radius: 50px;
+.modalConfig.show{
+    display: none;
 }
 
 .btnAdminConfig {
@@ -28,8 +23,8 @@
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-    background-color: #d6d6d6;
     padding: 15px;
+    font-size: 1.5rem;
 }
 
 .block_1 {
@@ -53,7 +48,6 @@
 .block_4 {
     display: grid;
     margin: 10px;
-    font-size: 0.8rem;
 }
 
 .divMensagem input {
@@ -61,7 +55,6 @@
     padding: 5px;
     margin-top: 5px;
     width: 100%;
-    font-size: 0.7rem;
 }
 
 .block_5 {
@@ -73,13 +66,11 @@
 #nome_sistema {
     padding: 5px;
     width: 100%;
-    font-size: 0.7rem;
 }
 
 .labelNome {
     margin-bottom: 5px;
     width: 100%;
-    font-size: 0.8rem;
 }
 
 .divNome {
@@ -89,7 +80,6 @@
 #email_sistema {
     padding: 5px;
     width: 100%;
-    font-size: 0.7rem;
 }
 
 .divEmail {
@@ -99,20 +89,17 @@
 .labelEmail {
     width: 100%;
     margin-bottom: 5px;
-    font-size: 0.8rem;
 }
 
 
 #telefone_sistema {
     padding: 5px;
     width: 100%;
-    font-size: 0.7rem;
 }
 
 .labelTelefone {
     width: 100%;
     margin-bottom: 5px;
-    font-size: 0.8rem;
 }
 
 .divTelefone {
@@ -123,13 +110,11 @@
 .form-control {
     padding: 5px;
     width: 100%;
-    font-size: 0.7rem;
 }
 
 .labelRelatorio {
     width: 100%;
     margin-bottom: 5px;
-    font-size: 0.8rem;
 }
 
 .divRelatorio {
@@ -155,49 +140,41 @@
 
 .labelDiasBlo {
     margin-bottom: 5px;
-    font-size: 0.8rem;
 }
 
 #dias_bloqueio {
     padding: 5px;
-    font-size: 0.7rem;
     width: 100%;
     margin-bottom: 5px;
 }
 
 .labelTestarsis {
     margin-bottom: 5px;
-    font-size: 0.8rem;
 }
 
 .divTestarsis select {
 
     padding: 5px;
-    font-size: 0.7rem;
     width: 100%;
     margin-bottom: 5px;
 }
 
 .labelDiasTeste {
-    font-size: 0.8rem;
     margin-bottom: 5px;
 }
 
 #dias_teste {
     padding: 5px;
-    font-size: 0.7rem;
     width: 100%;
     margin-bottom: 5px;
 }
 
 .labelToken {
     margin-bottom: 5px;
-    font-size: 0.8rem;
 }
 
 #token {
     padding: 5px;
-    font-size: 0.7rem;
     width: 100%;
     margin-bottom: 5px;
 }
@@ -262,7 +239,8 @@
     cursor: pointer;
     background-color: #0401b6;
     color: white;
-    margin-top: 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .divSalvarConfig button:hover {
@@ -275,4 +253,130 @@
     position: absolute;
     top: 10px;
     right: 50px;
+}
+
+#foto-logo{
+    font-size: 0.8rem;
+    width: 200px;
+    padding: 5px;
+}
+#foto-icone{
+    font-size: 0.8rem;
+    width: 200px;
+    padding: 5px;
+}
+#foto-logo-rel{
+    font-size: 0.8rem;
+    width: 200px;
+    padding: 5px; 
+}
+
+
+@media(max-width: 1000px){
+
+    .modalConfig{
+        font-size: 0.7rem;
+    }
+    
+}
+
+@media(max-width: 807px){
+
+    .modalConfig{
+        font-size: 0.6rem;
+      }
+    
+}
+@media(max-width: 728px){
+    .modalConfig{
+        font-size: 1rem;
+        overflow: auto;
+        height: 85vh;
+        width: 90vw;
+    }
+
+    .modal-title {
+        font-size: 1.3rem;
+    }
+    
+
+    .block_1 {
+        grid-template-columns: 1fr;
+    }
+    .block_2 {
+        grid-template-columns: 1fr;
+    }
+    .block_3 {
+        grid-template-columns: 1fr;
+    }
+    .block_4 {
+        grid-template-columns: 1fr;
+    }
+    .block_5 {
+        grid-template-columns: 1fr;
+    }
+
+    #foto-logo{
+        font-size: 1rem;
+        width: 100%;
+    }
+    #foto-icone{
+        font-size: 1rem;
+        width: 100%;
+    }
+    #foto-logo-rel{
+        font-size: 1rem;
+        width: 100%; 
+    }
+}
+
+@media(max-width: 500px){
+    .modalConfig{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+        padding: 0;
+        overflow: auto;
+        height: 100vh;
+        width: 100vw;
+        border-radius: 0px;
+    }
+}
+
+@media(max-width: 450px){
+    .modal-title {
+        margin-top: 10px;
+        font-size: 0.9rem;
+    }
+    .imgFechar{
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        width: 25px;
+    }
+}
+
+@media(max-width: 385px){
+    .modal-title {
+        margin-top: 50px;
+    }
+    .imgFechar{
+        position: absolute;
+        top: 20px;
+        right: 50%;
+        width: 25px;
+    }
+
+    #foto-logo{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+    #foto-icone{
+        font-size: 0.9rem;
+        width: 80%;
+    }
+    #foto-logo-rel{
+        font-size: 0.9rem;
+        width: 80%; 
+    }
 }

@@ -143,6 +143,48 @@
 }
 
  /* responsivo*/
+ @media(max-width: 610px) {
+    #btn-mobile{
+        color: #0401b6;
+    }
+    #hamburger{
+        position: absolute;
+        left: 5px;
+    }
+
+    #imgMoney{
+        display: none;
+    }
+
+    #imgLogin{
+        right: 0;
+        left: 80px;
+    }
+
+    #NomeUser{
+        right: 0;
+        top: 28px;
+        left: 130px; 
+        font-size: 0.7rem;
+    }
+
+    .dropdownUser {
+        
+        right: 0px;
+        left: 250px;
+        
+    }
+   
+ }
+ @media(max-width: 428px){
+    .dropdown-content{
+
+        position: absolute;
+        top: 55px;
+        right: 50px;
+       
+    }
+ }
 @media(max-width:500px){
     #nav.active #menu {
         width: 250px;  

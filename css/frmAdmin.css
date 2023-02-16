@@ -1,18 +1,40 @@
-.modalConfig{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border: none;
-  width: 90vw;
-  font-size: 0.9rem;
-  background-color: #e4e4e4;
-  border-radius: 20px;
-  z-index: 2;
-  overflow: auto;
+.modalConfig {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    width: 90vw;
+    height: 540px;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    z-index: 2;
+    overflow: auto;
+    background-image: linear-gradient(#8015fb, #c28efe);
+
+
+    transition: 0.9s; 
+    height: 0; /* esconder backgroud */
+    visibility: hidden; /* esconde menu*/
+    overflow-y: hidden; /* eixo y esconde */
 }
-.modalConfig.show{
-    display: none;
+
+.modalConfig.show {
+    transition: 0.9s;
+    height: 540px;
+    visibility: visible; /* aparece menu*/
+    overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
+}
+
+.modalConfig label {
+    color: white;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.modalConfig input {
+    border-radius: 10px;
+    border: none;
 }
 
 .btnAdminConfig {
@@ -25,7 +47,15 @@
     box-sizing: border-box;
     padding: 15px;
     font-size: 1.5rem;
+    background-color: #6a04dd;
 }
+
+.modal-title legend {
+    color: white;
+}
+
+
+
 
 .block_1 {
     display: grid;
@@ -63,172 +93,117 @@
     gap: 10px;
 }
 
-#nome_sistema {
-    padding: 5px;
-    width: 100%;
-}
-
-.labelNome {
-    margin-bottom: 5px;
-    width: 100%;
-}
-
-.divNome {
-    margin: 10px;
-}
-
-#email_sistema {
-    padding: 5px;
-    width: 100%;
-}
-
-.divEmail {
-    margin: 10px;
-}
-
-.labelEmail {
-    width: 100%;
-    margin-bottom: 5px;
-}
 
 
-#telefone_sistema {
-    padding: 5px;
-    width: 100%;
-}
 
-.labelTelefone {
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.divTelefone {
-    margin: 10px;
-}
-
-
-.form-control {
-    padding: 5px;
-    width: 100%;
-}
-
-.labelRelatorio {
-    width: 100%;
-    margin-bottom: 5px;
-}
-
+.divNome,
+.divEmail,
+.divTelefone,
 .divRelatorio {
     margin: 10px;
 }
 
-.divDiasBlo {
-    margin: 10px;
+#nome_sistema {
+    padding: 5px 20px 5px 20px;
+    width: 100%;
+    margin-top: 5px;
 }
 
-.divTestarsis {
-    margin: 10px;
+#email_sistema {
+    padding: 5px 20px 5px 20px;
+    width: 100%;
+    margin-top: 5px;
 }
 
-.divDiasTeste {
-    margin: 10px;
+#telefone_sistema {
+    padding: 5px 20px 5px 20px;
+    width: 100%;
+    margin-top: 5px;
 }
 
+.form-control {
+    padding: 5px 20px 2.5px 20px;
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+
+
+.divDiasBlo,
+.divTestarsis,
+.divDiasTeste,
 .divToken {
     margin: 10px;
 }
 
-
-.labelDiasBlo {
-    margin-bottom: 5px;
-}
-
-#dias_bloqueio {
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.labelTestarsis {
-    margin-bottom: 5px;
-}
-
-.divTestarsis select {
-
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
-.labelDiasTeste {
-    margin-bottom: 5px;
-}
-
-#dias_teste {
-    padding: 5px;
-    width: 100%;
-    margin-bottom: 5px;
-}
-
+.labelDiasBlo,
+.labelTestarsis,
+.labelDiasTeste,
 .labelToken {
     margin-bottom: 5px;
 }
 
-#token {
-    padding: 5px;
+#dias_bloqueio {
+    padding: 5px 20px 5px 20px;
     width: 100%;
-    margin-bottom: 5px;
 }
 
-.divLogo label {
-    margin: 10px;
+.divTestarsis select {
+
+    padding: 5px 20px 2.5px 20px;
+    width: 100%;
+    border-radius: 10px;
 }
 
-.divLogo input {
-    margin-left: 10px;
+#dias_teste {
+    padding: 5px 20px 5px 20px;
+    width: 100%;
+}
+
+#token {
+    padding: 5px 20px 5px 20px;
+    width: 100%;
+}
+
+
+.divLogo,
+.divIcone,
+.divLogoRel {
     margin-top: 5px;
 }
 
-.divIcone label {
-    margin: 10px;
-}
-
-.divIcone input {
-    margin-left: 10px;
-    margin-top: 5px;
-}
-
+.divLogo label,
+.divIcone label,
 .divLogoRel label {
-    margin: 10px;
+    margin-left: 10px;
 }
 
+.divLogo input,
+.divIcone input,
 .divLogoRel input {
     margin-left: 10px;
     margin-top: 5px;
+    margin-right: 10px;
 }
 
-.divLogoImg {
 
-    margin: 10px;
-    border-radius: 20px;
-    text-align: center;
-}
 
-.divIconeImg {
-    margin: 10px;
-    border-radius: 20px;
-    text-align: center;
-}
 
+.divLogoImg,
+.divIconeImg,
 .divLogoRelImg {
     margin: 10px;
-    border-radius: 20px;
-    text-align: center;
+    padding-left: 50px;
+    text-align: left;
 }
 
+
 .divSalvarConfig {
-    display: block;
+    background-color: #6a04dd;
     width: 100%;
-    text-align: center;
+    padding: 30px;
+    margin-top: 20px;
 }
 
 .divSalvarConfig button {
@@ -239,8 +214,6 @@
     cursor: pointer;
     background-color: #0401b6;
     color: white;
-    margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 .divSalvarConfig button:hover {
@@ -248,90 +221,158 @@
     transition: 0.3s;
     color: #000000;
 }
-.imgFechar{
+
+#btnSalvarConfig {
+    width: 100%;
+    text-align: center;
+}
+
+.imgFechar {
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 50px;
 }
 
-#foto-logo{
+
+
+#foto-logo {
+    box-sizing: border-box;
     font-size: 0.8rem;
     width: 200px;
     padding: 5px;
+    border-radius: 10px;
+    background-color: #c87fff;
 }
-#foto-icone{
+
+#foto-icone {
+    box-sizing: border-box;
     font-size: 0.8rem;
     width: 200px;
     padding: 5px;
+    background-color: #c87fff;
 }
-#foto-logo-rel{
+
+#foto-logo-rel {
+    box-sizing: border-box;
     font-size: 0.8rem;
     width: 200px;
-    padding: 5px; 
+    padding: 5px;
+    background-color: #c87fff;
+}
+
+#foto-logo:hover {
+    background-color: #ff8af5;
+}
+
+#foto-icone:hover {
+    background-color: #ff8af5;
+}
+
+#foto-logo-rel:hover {
+    background-color: #ff8af5;
 }
 
 
-@media(max-width: 1000px){
 
-    .modalConfig{
+@media(max-width: 1000px) {
+
+    .modalConfig {
         font-size: 0.7rem;
     }
-    
+
 }
 
-@media(max-width: 807px){
+@media(max-width: 807px) {
 
-    .modalConfig{
+    .modalConfig {
         font-size: 0.6rem;
-      }
-    
+    }
+
 }
-@media(max-width: 728px){
-    .modalConfig{
+
+@media(max-width: 760px) {
+    .modalConfig {
         font-size: 1rem;
         overflow: auto;
         height: 85vh;
         width: 90vw;
+
+        transition: 0.9s; 
+        height: 0; /* esconder backgroud */
+        visibility: hidden; /* esconde menu*/
+        overflow-y: hidden; /* eixo y esconde */
+
+    }
+
+    .modalConfig.show {
+        transition: 0.9s;
+        visibility: visible; /* aparece menu*/
+        overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
+        height: 85vh;
     }
 
     .modal-title {
         font-size: 1.3rem;
     }
-    
 
-    .block_1 {
-        grid-template-columns: 1fr;
-    }
-    .block_2 {
-        grid-template-columns: 1fr;
-    }
-    .block_3 {
-        grid-template-columns: 1fr;
-    }
-    .block_4 {
-        grid-template-columns: 1fr;
-    }
+
+    .block_1,
+    .block_2,
+    .block_3,
+    .block_4,
     .block_5 {
         grid-template-columns: 1fr;
     }
 
-    #foto-logo{
+
+    #foto-logo {
+        width: 75%;
+        margin-bottom: 100px;
         font-size: 1rem;
-        width: 100%;
     }
-    #foto-icone{
+
+    #foto-icone {
+        width: 75%;
+        margin-bottom: 100px;
         font-size: 1rem;
-        width: 100%;
     }
-    #foto-logo-rel{
+
+    #foto-logo-rel {
+        width: 75%;
+        margin-bottom: 100px;
         font-size: 1rem;
-        width: 100%; 
+    }
+
+    .divLogoImg {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 810px;
+        left: 50px;
+    }
+
+    .divIconeImg {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 985px;
+        left: 50px;
+
+    }
+
+    .divLogoRelImg {
+
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 1160px;
+        left: 50px;
     }
 }
 
-@media(max-width: 500px){
-    .modalConfig{
+@media(max-width: 500px) {
+    .modalConfig {
         display: grid;
         grid-template-columns: 1fr;
         margin: 0;
@@ -340,43 +381,49 @@
         height: 100vh;
         width: 100vw;
         border-radius: 0px;
-    }
-}
 
-@media(max-width: 450px){
+        transition: 0.9s; 
+        height: 0; /* esconder backgroud */
+        visibility: hidden; /* esconde menu*/
+        overflow-y: hidden; /* eixo y esconde */
+    }
+    .modalConfig.show {
+        transition: 0.9s;
+        visibility: visible; /* aparece menu*/
+        overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
+        height: 100vh;
+    }
+
     .modal-title {
-        margin-top: 10px;
+        padding-top: 100px;
         font-size: 0.9rem;
-    }
-    .imgFechar{
-        position: absolute;
-        top: 20px;
-        right: 50px;
-        width: 25px;
-    }
-}
-
-@media(max-width: 385px){
-    .modal-title {
-        margin-top: 50px;
-    }
-    .imgFechar{
-        position: absolute;
-        top: 20px;
-        right: 50%;
-        width: 25px;
     }
 
-    #foto-logo{
-        font-size: 0.9rem;
-        width: 80%;
+    .imgFechar {
+        top: 50px;
+        right: 0;
+        left: 45%;
     }
-    #foto-icone{
-        font-size: 0.9rem;
-        width: 80%;
+
+    .divSalvarConfig {
+        padding: 15px 0px 50px 0px;
     }
-    #foto-logo-rel{
-        font-size: 0.9rem;
-        width: 80%; 
+
+    .divLogoImg {
+
+        top: 890px;
+
+    }
+
+    .divIconeImg {
+
+        top: 1060px;
+    }
+
+    .divLogoRelImg {
+
+
+        top: 1235px;
+
     }
 }

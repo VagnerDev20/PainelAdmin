@@ -181,46 +181,47 @@
 
         <div class="block_3">
 
-            <div class="divLogoImg" style="background: #dbdbdb">
+            <div class="divLogoImg">
                 <img src="img/sigma.png" width="80px" id="target-logo" />
             </div>
 
-            <div class="divIconeImg" style="background: #dbdbdb">
+            <div class="divIconeImg">
                 <img src="img/sigma.png" width="80px" id="target-icone" />
             </div>
 
-            <div class="divLogoRelImg" style="background: #dbdbdb">
+            <div class="divLogoRelImg">
                 <img src="img/sigma.png" width="80px" id="target-logo-rel" />
             </div>
 
         </div>
 
         <div class="divSalvarConfig">
-            <button type="submit">SALVAR</button>
+            <div id="btnSalvarConfig"><button type="submit">SALVAR</button></div>
         </div>
 
-        <script>
-            document.addEventListener("keydown", function (event) {
-                if (event.key === "Escape") {
-                    // Adicione aqui o código para fechar o formulário
-                    const element = document.querySelector('.modalConfig');
-                    element.classList.toggle('show');
-                }
-            });
-
-        </script>
 
         <script>
-
             const btnAdminConfig = document.querySelector('.btnAdminConfig');
             const modalConfig = document.querySelector('.modalConfig');
 
             btnAdminConfig.addEventListener('click', () => {
                 modalConfig.classList.toggle('show');
+
+
+
+                dropdownContentClose();
+                dropdownIconClose();
             });
         </script>
 
     </form>
+
+    <script>
+        document.querySelector('.imgFechar').onclick = function () { imgFecharFunction() };
+        function imgFecharFunction() {
+            document.querySelector('.modalConfig').classList.toggle("show");
+        }
+    </script>
 
 
 

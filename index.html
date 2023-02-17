@@ -30,7 +30,7 @@
             <div><span>NIVEL USUARIO</span></div>
         </div>
 
-        <!--botao dropdown-->
+        <!--dropdown admin-->
         <div class="dropdownUser">
             <img class="btnUser" id="dropdown-icon" src="img/downblack.svg" alt="" width="30px" />
 
@@ -39,10 +39,10 @@
                 <div><span class="btnAdminPerfil">PERFIL</span></div>
                 <a href="">SAIR</a>
             </div>
-
-            <script src="js/dropdownUser.js"></script>
         </div>
     </header>
+
+
 
     <menu>
         <nav id="nav">
@@ -69,13 +69,41 @@
                         </ul>
                     </div>
                 </li>
-                <script src="js/dropdown.js"></script>
+                <!--dropdown submenu-->
+                <script>
+
+                    document.getElementById("myBtn").onclick = function () { MenuDropdown() };
+                    function MenuDropdown() {
+                        document.getElementById("myDropdown").classList.toggle("show");
+                    }
+
+                </script>
 
                 <li class="menulista"><a href="/">CADASTRO</a></li>
             </ul>
         </nav>
+
+        <!--botao menu hamburguer-->
+        <script>
+            const btnMobile = document.getElementById('btn-mobile'); // pega o elemento pelo id
+
+            function toggleMenu(event) {
+                if (event.type === 'touchstart') event.preventDefault(); // execulta o touch do android não executa o evento click
+                const nav = document.getElementById('nav');
+                nav.classList.toggle('active'); // toggle remove a classe 'active' se tiver adicina se não tiver
+                const active = nav.classList.contains('active');
+                event.currentTarget.setAttribute('aria-expanded', active);
+                if (active) {
+                    event.currentTarget.setAttribute('aria-label', 'Fechar Menu');
+                } else {
+                    event.currentTarget.setAttribute('aria-label', 'Abrir Menu');
+                }
+            }
+
+            btnMobile.addEventListener('click', toggleMenu);
+            btnMobile.addEventListener('touchstart', toggleMenu);
+        </script>
     </menu>
-    <script src="js/script.js"></script>
 
 
     <!--formulario configurações-->
@@ -199,32 +227,91 @@
             <div id="btnSalvarConfig"><button type="submit">SALVAR</button></div>
         </div>
 
+        <!-- botao icone dropdow header-->
+        <script>
+            const dropdownBtn = document.querySelector('.btnUser');
+            const dropdownContent = document.querySelector('.dropdown-content');
 
+            dropdownBtn.addEventListener('click', () => {
+                dropdownContent.classList.toggle('show');
+            });
+
+
+            const dropdownIcon = document.getElementById("dropdown-icon");
+
+            dropdownIcon.addEventListener("click", function () {
+                dropdownIcon.classList.toggle("rotated");
+            });
+        </script>
+
+
+        <!--botao configuração dropdown-->
         <script>
             const btnAdminConfig = document.querySelector('.btnAdminConfig');
             const modalConfig = document.querySelector('.modalConfig');
 
             btnAdminConfig.addEventListener('click', () => {
                 modalConfig.classList.toggle('show');
+            });
+        </script>
+
+        <!--botao icone formulario configuração-->
+        <script>
+            document.querySelector('.imgFechar').onclick = function () { imgFecharForm() };
+            function imgFecharForm() {
+                document.querySelector('.modalConfig').classList.toggle("show");
+            }
+        </script>
 
 
+       <!--escript para fechar o formulario ao clicar no esc-->
+        <script>
+            // seleciona o formulário que você deseja controlar
+            const meuElemento = document.querySelector('.modalConfig');// seleciona a classe do form
+            
+            function verificarClasseShow(meuElemento) 
+            {
+                if (meuElemento.classList.contains('show')) {
+                    document.querySelector('.modalConfig').classList.toggle("show");
+                } else {
+                    
+                }
+            }
 
-                dropdownContentClose();
-                dropdownIconClose();
+            // adiciona um evento de escuta de teclado ao documento
+            document.addEventListener('keydown', (event) => {
+                // verifica se a tecla "Esc" foi pressionada
+                if (event.key === 'Escape') {
+                    
+                    verificarClasseShow(meuElemento); // chamada da função
+
+                }
             });
         </script>
 
     </form>
-
-    <script>
-        document.querySelector('.imgFechar').onclick = function () { imgFecharFunction() };
-        function imgFecharFunction() {
-            document.querySelector('.modalConfig').classList.toggle("show");
-        }
-    </script>
 
 
 
 </body>
 
 </html>
+
+<script>
+    // escript para fechar o dropdwon e rotação do icone ao clicar
+    // no botão configutação
+    const dropdownBtnClose = document.querySelector('.btnAdminConfig');
+    const dropdownContentClose = document.querySelector('.dropdown-content');
+
+    dropdownBtnClose.addEventListener('click', () => {
+        dropdownContentClose.classList.toggle('show');
+    });
+
+
+    const dropdownClose = document.querySelector('.btnAdminConfig');
+    const dropdownIconClose = document.getElementById("dropdown-icon");
+
+    dropdownClose.addEventListener("click", function () {
+        dropdownIconClose.classList.toggle("rotated");
+    });
+</script>

@@ -1,0 +1,58 @@
+#overlayPerfil{
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modalPerfil {
+  position: absolute;
+  top: 100px;
+  left:25% ;
+  border: none;
+  width: 50vw;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  z-index: 2;
+  overflow: auto;
+  background-color: white;
+  transition: 0.9s;
+  height: 0; /* esconder backgroud */
+  visibility: hidden; /* esconde menu*/
+  overflow-y: hidden; /* eixo y esconde */
+  box-shadow: 0px 8px 16px 0px #00000033;
+  
+}
+
+.modalPerfil.open {
+  transition: 0.9s;
+  height: 540px;
+  visibility: visible; /* aparece menu*/
+  overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
+}
+
+#overlayPerfil.visible {
+  display: block;
+}
+
+.blockPerfil{
+  margin: 10px;
+}
+
+.MarginLabel {
+  background-color: aquamarine;
+  width: 100%;
+}
+
+.modalPerfil label {
+  color: black;
+  
+}
+
+.modalPerfil input {
+  width: 100%;
+}

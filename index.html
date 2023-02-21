@@ -78,6 +78,7 @@
 
 
     <div id="overlay"></div>
+    <div id="overlayPerfil"></div>
     <!--formulario configurações-->
 
 
@@ -202,55 +203,76 @@
 
     </form>
     
-    <script>
-        //ao clicar no botão bloqueia o fundo
-        const openFormBtn = document.querySelector('.btnAdminConfig');
-        const myForm = document.querySelector('.modalConfig');
-        const overlay = document.getElementById('overlay');
 
-        openFormBtn.addEventListener('click', function () {
-            myForm.classList.add('open');
-            overlay.classList.add('visible');
-            toggleDropdownContent();
-            dropdownIconRotated();
-        });
+    <!--formulario de perfil-->
+    <form action="" class="modalPerfil">
+        <div class="perfil-title">
+            <legend>ALTERAR DADOS</legend>
+        </div>
 
-        overlay.addEventListener('click', function () {
-            myForm.classList.remove('open');
-            overlay.classList.remove('visible');
-        });
+        <div>
+            <img src="img/fechar.png" width="30px" class="imgFecharPerfil" />
+        </div>
 
-    </script>
-    
-    <!--escript para fechar o formulario ao clicar no esc-->
-    <script>
-        // seleciona o formulário que você deseja controlar
-        const meuElemento = document.querySelector('.modalConfig');// seleciona a classe do form
-        const overlayClose = document.getElementById('overlay');
+        <div class="blockPerfil">
+            <div><label for="nome_perfil">NOME PERFIL</label></div>
+            <input id="nome_perfil" type="text" name="nome_perfil" placeholder="DIGITE AQUI" required />
+        </div>
+
+        <div class="blockPerfil">
+            <div><label for="email_perfil">EMAIL PERFIL</label></div>
+            <input id="email_perfil" type="email" name="email_perfil" placeholder="DIGITE SEU EMAIL AQUI"
+                autocomplete="email" required />
+        </div>
+
+
+        <div class="blockPerfil">
+            <div><label for="telefone_perfil">SEU TEL.</label></div>
+            <input id="telefone_perfil" type="text" name="telefone_perfil" placeholder="N° TELEFONE" required />
+        </div>
+
         
-        function verificarClasseShow(meuElemento) 
-        {
-            if (meuElemento.classList.contains('open')) {
-                document.querySelector('.modalConfig').classList.toggle("open");
-                overlayClose.classList.remove('visible');
-            } else {
+        <div class="blockPerfil">
+            <div><label for="cpf_perfil">CPF/CNPJ</label></div>
+            <input id="cpf_perfil" type="text" name="cpf_perfil" placeholder="N° CPF/CNPJ" required />
+        </div>
+
+        <div>
+            <div class="blockPerfil">							
+                    <div><label>SENHA</label></div>
+                    <input type="password" id="senha_perfil" name="senha_perfil" placeholder="SENHA" required>							
+            </div>
+
+            <div class="blockPerfil">							
+                    <div><label>CONFIRMAR SENHA</label></div>
+                    <input type="password" id="conf_senha_perfil" name="conf_senha_perfil" placeholder="CONFIRMAR SENHA" value="" required>							
+            </div>
+        </div>
+
+        <div class="blockPerfil">							
+            <div><label>ENDEREÇO</label></div>
+            <input type="text" id="endereco_perfil" name="endereco_perfil" placeholder="DIGITE SEU ENDEREÇO" >							
+        </div>
+
+        <div>
+            <div class="blockPerfil">							
+                    <div><label>FOTO</label></div>
+                    <input type="file" id="foto_perfil" name="foto_perfil" value=""  onchange="carregarImgPerfil()">							
+            </div>
+
+            <div class="">								
+                <img src=""  width="80px" id="target-usu">								
                 
-            }
-        }
+            </div>
 
-        // adiciona um evento de escuta de teclado ao documento
-        document.addEventListener('keydown', (event) => {
-            // verifica se a tecla "Esc" foi pressionada
-            if (event.key === 'Escape') {
-                
-                verificarClasseShow(meuElemento); // chamada da função
+        </div>
 
-            }
-        });
-    </script>
+        <input type="hidden" name="id" id="id_perfil">
 
+        <div><button type="submit">SALVAR</button></div>
 
-
+    </form>
+    
     <script src="js/Botoes.js"></script>
 
 </body>

@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
   display: none;
 }
 
@@ -18,19 +18,18 @@
   font-size: 0.9rem;
   border-radius: 20px;
   z-index: 2;
-  overflow: auto;
   background-color: white;
   transition: 0.9s;
-  height: 0; /* esconder backgroud */
+  height: 0; /* esconder form */
   visibility: hidden; /* esconde menu*/
-  overflow-y: hidden; /* eixo y esconde */
+  overflow-y:hidden; /* eixo y esconde */
   box-shadow: 0px 8px 16px 0px #00000033;
   
 }
 
 .modalPerfil.open {
   transition: 0.9s;
-  height: 540px;
+  height: 75vh;
   visibility: visible; /* aparece menu*/
   overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
 }
@@ -39,13 +38,23 @@
   display: block;
 }
 
-.blockPerfil{
-  margin: 10px;
+
+/* Estilizando a barra de rolagem */
+.modalPerfil::-webkit-scrollbar {
+  width: 5px;
+  height: 15px;
 }
 
-.MarginLabel {
-  background-color: aquamarine;
-  width: 100%;
+/* Estilizando o indicador de rolagem */
+.modalPerfil::-webkit-scrollbar-thumb {
+  background-color: #66666634; /* Cor do indicador de rolagem */
+  height: 15px;
+}
+
+.blockPerfil{
+  margin: 10px;
+  height: 50px;
+  display: grid;
 }
 
 .modalPerfil label {
@@ -55,4 +64,129 @@
 
 .modalPerfil input {
   width: 100%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+  border-radius: 10px;
 }
+
+.btnAdminPerfil {
+  cursor: pointer;
+}
+.perfil-title {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 1.5rem;
+  background-color: #6959CD;
+}
+
+.perfil-title legend {
+  color: white;
+}
+.divSalvarPerfil{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.divSalvarPerfil button{
+  padding: 10px;
+  width: 200px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #0401b6;
+  color: white;
+}
+.divSalvarPerfil button:hover{
+  background-color: #eba2f8;
+  transition: 0.3s;
+  color: #000000;
+}
+#btnSalvarPerfil{
+  width: 100%;
+  text-align: center;
+}
+
+.GridPerfil{
+  margin: 10px;
+}
+
+#foto_perfil{
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #6959CD;
+}
+
+#foto_perfil:hover {
+  background-color: #ff8af5;
+}
+
+.imgFecharPerfil{
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+}
+@media (max-width:900px){
+  .perfil-title {
+    font-size: 1rem;
+    
+  }
+  .modalPerfil {
+    
+    left: 20%;
+    width: 60vw;
+    
+  }
+
+}
+
+@media (max-width: 750px){
+  .modalPerfil {
+    
+    left: 13%;
+    width: 75vw;
+    
+  }
+  
+  .modalPerfil.open {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 500px){
+  .modalPerfil {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    
+  }
+  
+  .modalPerfil.open {
+    height: 100%;
+  }
+
+  .perfil-title {
+    padding-top: 100px;
+    font-size: 1rem;
+  }
+
+  .imgFecharPerfil{
+    
+    top: 40px;
+    right: 45%;
+  }
+
+  .divSalvarPerfil{
+    margin-bottom: 50px;
+  }
+}
+
+

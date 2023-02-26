@@ -23,6 +23,22 @@
     overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
 }
 
+/* Estilizando a barra de rolagem */
+#menu::-webkit-scrollbar {
+    width: 5px;
+    height: 15px;
+}
+  
+/* Estilizando o indicador de rolagem */
+#menu::-webkit-scrollbar-thumb {
+    background-color: #00aeffbf; /* Cor do indicador de rolagem */
+    height: 15px;
+}
+
+#id_home{
+    margin-top: 20px;
+}
+
 .menulista a {
     display: block;
     width: 150px;
@@ -89,11 +105,15 @@
     height: 120px;
     visibility: visible; /* aparece menu*/
     overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
+    overflow-x: hidden;
 }
 
-  
 
 /* Fim menu dropdown*/
+
+#RelatorioMenu{
+    margin-bottom: 40px;
+}
 
 #btn-mobile {
     position: absolute;

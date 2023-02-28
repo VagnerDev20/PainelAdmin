@@ -40,13 +40,37 @@ btnMobile.addEventListener("touchstart", toggleMenu);
 //*****************************************************************************
 
 
-//dropdown submenu menu principal
-document.getElementById("myBtn").onclick = function () {
-  MenuDropdown();
-};
-function MenuDropdown() {
-  document.getElementById("myDropdown").classList.toggle("show");
+//dropdown menu cadastro
+const btnCadastro = document.getElementById("btnCadastro");
+const cadastroMenu = document.getElementById("CadastroMenu");
+
+function menuDropdown() {
+  cadastroMenu.classList.toggle("show");
 }
+
+btnCadastro.addEventListener("click", menuDropdown);
+//*****************************************************************************
+
+//dropdown menu financeiro
+const btnfinanceiro = document.getElementById("btnFinanceiro");
+const financeiromenu = document.getElementById("FinanceiroMenu");
+
+function menuFinanceiro() {
+  financeiromenu.classList.toggle("show");
+}
+
+btnfinanceiro.addEventListener("click", menuFinanceiro);
+//*****************************************************************************
+
+//dropdown menu relatorio
+const btnrelatorio = document.getElementById("btnRelatorio");
+const relatoriomenu = document.getElementById("RelatorioMenu");
+
+function menuRelatorio() {
+  relatoriomenu.classList.toggle("show");
+}
+
+btnrelatorio.addEventListener("click", menuRelatorio);
 //*****************************************************************************
 
 // *********FORMULARIOS ADMIN***************
@@ -145,6 +169,20 @@ document.addEventListener('keydown', (event) => {
 });
 //*****************************************************************************
 
+
+// botao close configuração
+const btnCloseConfig = document.querySelector('.imgFechar');
+function CloseConfigModal(){
+  closeModal();
+}
+btnCloseConfig.addEventListener('click', CloseConfigModal);
+
+// botao close perfil
+const btnClosePerfil = document.querySelector('.imgFecharPerfil');
+function FecharFrmPerfil(){
+  closeModalPerfil();
+}
+btnClosePerfil.addEventListener('click', FecharFrmPerfil);
 
 
 

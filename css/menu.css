@@ -93,16 +93,47 @@
     color: #000000;
 }
 
-.dropdown{
+#CadastroMenu{
     transition: 0.9s; 
     height: 0; /* esconder backgroud */
     visibility: hidden; /* esconde menu*/
     overflow-y: hidden; /* eixo y esconde */
     
 }
-.show {
+#CadastroMenu.show {
     transition: 0.9s;
-    height: 120px;
+    height: 110px;
+    visibility: visible; /* aparece menu*/
+    overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
+    overflow-x: hidden;
+}
+
+
+#FinanceiroMenu{
+    transition: 0.9s; 
+    height: 0; /* esconder backgroud */
+    visibility: hidden; /* esconde menu*/
+    overflow-y: hidden; /* eixo y esconde */
+    
+}
+#FinanceiroMenu.show {
+    transition: 0.9s;
+    height: 75px;
+    visibility: visible; /* aparece menu*/
+    overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
+    overflow-x: hidden;
+}
+
+#RelatorioMenu{
+    transition: 0.9s; 
+    height: 0; /* esconder backgroud */
+    visibility: hidden; /* esconde menu*/
+    overflow-y: hidden; /* eixo y esconde */
+    
+}
+#RelatorioMenu.show {
+    transition: 0.9s;
+    height: 150px;
     visibility: visible; /* aparece menu*/
     overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
     overflow-x: hidden;

@@ -16,7 +16,7 @@ ul{
 
 
 body{
-    background-image: url('/img/fundo.jpg');
+    background-image: url('../img/fundo.jpg');
     background-position: center 100px;
     background-size: 800px 600px;
     background-repeat: no-repeat;

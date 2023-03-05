@@ -80,7 +80,8 @@
   box-sizing: border-box;
   padding: 15px;
   font-size: 1.5rem;
-  background-color: #6959CD;
+  /*background-color: #6959CD;*/
+  background-image: linear-gradient(#0401b6, #00aeff);
 }
 
 .perfil-title legend {
@@ -101,7 +102,7 @@
   color: white;
 }
 .divSalvarPerfil button:hover{
-  background-color: #eba2f8;
+  background-color: #ffd4d4;
   transition: 0.3s;
   color: #000000;
 }
@@ -119,11 +120,11 @@
   font-size: 0.8rem;
   padding: 5px;
   border-radius: 10px;
-  background-color: #6959CD;
+  background-color: #90bbfc;
 }
 
 #foto_perfil:hover {
-  background-color: #ff8af5;
+  background-color: #ffd4d4;
 }
 
 .imgFecharPerfil{

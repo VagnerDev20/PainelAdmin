@@ -1,26 +1,23 @@
-/* menu principal */
-#menu{
-
+#menu {
     position: absolute;
     top: 100px;
     height: calc(100vh - 100px);
-    width: 300px;
     background-image: linear-gradient(#0401b6, #00aeff);
     box-sizing: border-box;
     z-index: 1;
-    transition: 0.9s; 
-    width: 0; /* esconder backgroud */
-    visibility: hidden; /* esconde menu*/
-    overflow-y: hidden; /* eixo y esconde */
-
+    transition: 0.9s;
+    width: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 /* aparecer menu */
 #nav.active #menu {
     transition: 0.9s;
     width: 300px;
-    visibility: visible; /* aparece menu*/
-    overflow-y: auto; /* auto cria a barra de scroll se utrapassar a tela*/
+    visibility: visible;
+    overflow-y: auto;
 }
 
 /* Estilizando a barra de rolagem */
@@ -28,224 +25,286 @@
     width: 5px;
     height: 15px;
 }
-  
+
 /* Estilizando o indicador de rolagem */
 #menu::-webkit-scrollbar-thumb {
-    background-color: #00aeffbf; /* Cor do indicador de rolagem */
+    background-color: #00aeffbf;
+    /* Cor do indicador de rolagem */
     height: 15px;
 }
 
-#id_home{
-    margin-top: 20px;
-}
-
-.menulista a {
-    display: block;
-    width: 150px;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: #f8f9f7;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    margin-left: 15px;
-
-}
-  
-.menulista a:hover {
-    background-color: #eba2f8;
-    transition: 0.3s;
-    color: #000000;
-}
-
-
-/* menu dropdown*/
-
-.submenu{
-    display: block;
-    font-size: 0.9rem;
-    margin-left: 20px;
-    text-decoration: none;
-    color: #f8f9f7;
-    padding: 5px 15px;
-    width: 135px;
-    border-radius: 10px;
-}
-.CorSubMenu a:hover {
-    background-color: #eba2f8;
-    transition: 0.3s;
-    color: #000000;
-}
-.CorSubMenu span{
-
-    display: block;
-    width: 150px;
-    padding: 10px 10px;
-    text-decoration: none;
-    color: #f8f9f7;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-left: 15px;
-}
-.CorSubMenu span:hover {
-    background-color: #eba2f8;
-    transition: 0.3s;
-    color: #000000;
-}
-
-#CadastroMenu{
-    transition: 0.9s; 
-    height: 0; /* esconder backgroud */
-    visibility: hidden; /* esconde menu*/
-    overflow-y: hidden; /* eixo y esconde */
-    
-}
-#CadastroMenu.show {
-    transition: 0.9s;
-    height: 110px;
-    visibility: visible; /* aparece menu*/
-    overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
-    overflow-x: hidden;
-}
-
-
-#FinanceiroMenu{
-    transition: 0.9s; 
-    height: 0; /* esconder backgroud */
-    visibility: hidden; /* esconde menu*/
-    overflow-y: hidden; /* eixo y esconde */
-    
-}
-#FinanceiroMenu.show {
-    transition: 0.9s;
-    height: 75px;
-    visibility: visible; /* aparece menu*/
-    overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
-    overflow-x: hidden;
-}
-
-#RelatorioMenu{
-    transition: 0.9s; 
-    height: 0; /* esconder backgroud */
-    visibility: hidden; /* esconde menu*/
-    overflow-y: hidden; /* eixo y esconde */
-    
-}
-#RelatorioMenu.show {
-    transition: 0.9s;
-    height: 150px;
-    visibility: visible; /* aparece menu*/
-    overflow-y: hidden; /* auto cria a barra de scroll se utrapassar a tela*/
-    overflow-x: hidden;
-}
-
-
-/* Fim menu dropdown*/
-
-#RelatorioMenu{
-    margin-bottom: 40px;
+.TitoloMenu {
+    color: #fbfbfb;
+    position: absolute;
+    top: 40px;
+    margin-left: 30px;
+    z-index: 2;
 }
 
 #btn-mobile {
+    padding: 10px;
     position: absolute;
     top: 30px;
     display: flex;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
     border: none;
     background: none;
     cursor: pointer;
-    gap: 0.5rem;
     color: #ffffff;
     z-index: 1;
-    margin-left: 10px;
-
+    margin-left: 80px;
 }
-    /* criando o botao amburguer */
+
 #hamburger {
     border-top: 2px solid;
-    width: 20px;
+    width: 30px;
     color: rgb(255, 255, 255);
-    z-index: 2000;
-    margin-left: 15px;
+    z-index: 1;
+
 }
+
 #hamburger::after,
 #hamburger::before {
     content: '';
     display: block;
-    width: 20px;
+    width: 30px;
     height: 2px;
     background: currentColor;
     margin-top: 5px;
     transition: 0.3s;
     position: relative;
 }
-    
-    /* criando o x */
+
+/* criando o x */
 #nav.active #hamburger {
     border-top-color: transparent;
 }
+
 #nav.active #hamburger::before {
     transform: rotate(135deg);
 }
+
 #nav.active #hamburger::after {
     transform: rotate(-135deg);
     top: -7px;
 }
 
- /* responsivo*/
- @media(max-width: 610px) {
-    #btn-mobile{
-        color: #0401b6;
-    }
-    #hamburger{
-        position: absolute;
-        left: 5px;
-    }
+#CadastroMenu {
 
-    #imgMoney{
-        display: none;
-    }
+    font-size: 0.9rem;
+    transition: 0.9s;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 
-    #imgLogin{
-        right: 0;
-        left: 80px;
-    }
-
-    #NomeUser{
-        right: 0;
-        top: 28px;
-        left: 130px; 
-        font-size: 0.7rem;
-    }
-
-    .dropdownUser {
-        
-        right: 0px;
-        left: 250px;
-        
-    }
-   
- }
- @media(max-width: 428px){
-    .dropdown-content{
-
-        position: absolute;
-        top: 55px;
-        right: 50px;
-       
-    }
- }
-@media(max-width:500px){
-    #nav.active #menu {
-        width: 250px;  
-    }
 }
 
-@media(max-width:400px){
-    #nav.active #menu {
-        width: 200px;  
-    }
+#CadastroMenu.show {
+    transition: 0.9s;
+    height: 145px;
+    visibility: visible;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+#CadastroMenu a {
+    display: block;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 60px;
+    color: white;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#CadastroMenu a:hover{
+    background-color: #608afc;
+    transition: 0.3s;
+}
+
+#FinanceiroMenu {
+    font-size: 0.9rem;
+    transition: 0.9s;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+#FinanceiroMenu.show {
+    transition: 0.9s;
+    height: 70px;
+    visibility: visible;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#FinanceiroMenu a{
+    display: block;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 60px;
+    color: white;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#FinanceiroMenu a:hover{
+    background-color: #608afc;
+    transition: 0.3s;
+}
+
+#RelatorioMenu {
+    font-size: 0.9rem;
+    transition: 0.9s;
+    height: 0;
+    visibility: hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+
+#RelatorioMenu.show {
+    transition: 0.9s;
+    height: 150px;
+    visibility: visible;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    margin-bottom: 25px;
+}
+
+#RelatorioMenu a{
+    display: block;
+    text-decoration: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 60px;
+    color: white;
+    width: 100%;
+    margin-bottom: 5px;
+}
+#RelatorioMenu a:hover{
+    background-color: #608afc;
+    transition: 0.3s;
 }
 
 
+
+.DisplayMenu {
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.DisplayMenu:hover {
+    background-color: #608afc;
+    transition: 0.3s;
+}
+
+.DisplayMenu a {
+    padding: 10px 0px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.DisplayMenu span {
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.DisplayMenu img {
+    width: 25px;
+    margin-right: 10px;
+}
+
+.DisplayCadastro{
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    padding-left: 25px;
+    align-items: center;
+    
+}
+.DisplayCadastro:hover{
+    background-color: #608afc;
+    transition: 0.3s;
+}
+
+.DisplayCadastro span {
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    width: 100%;
+}
+.DisplayCadastro img{
+    width: 25px;
+    margin-right: 10px;
+}
+.topo {
+    margin-bottom: 40px;
+}
+
+.DisplayFinan{
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    padding-left: 25px;
+    align-items: center;
+    margin-top: 15px;
+}
+.DisplayFinan:hover{
+    background-color: #608afc;
+    transition: 0.3s;
+}
+
+.DisplayFinan span{
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    width: 100%;
+}
+.DisplayFinan img{
+    width: 25px;
+    margin-right: 10px;
+}
+
+
+
+.DisplayRelat{
+    box-sizing: border-box;
+    display: flex;
+    cursor: pointer;
+    padding-left: 25px;
+    align-items: center;
+    margin-top: 15px;
+}
+.DisplayRelat:hover{
+    background-color: #608afc;
+    transition: 0.3s;
+}
+
+.DisplayRelat span{
+    display: block;
+    padding: 10px 0px;
+    text-decoration: none;
+    color: #f8f9f7;
+    font-size: 1.1rem;
+    width: 100%;
+}
+.DisplayRelat img{
+    width: 25px;
+    margin-right: 10px;
+}

@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" href="img/sigma.png" />
 
     <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/5d114abbd8.js" crossorigin="anonymous"></script>
 
     <title>PAINEL PRINCIAPL</title>
 </head>
@@ -43,60 +44,103 @@
     </header>
 
 
-
+    <!--menu lateral-->
     <menu>
+
         <nav id="nav">
+
+            <span class="TitoloMenu">MENU</span>
             <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu"
-                aria-expanded="false">
-                MENU<span id="hamburger"></span>
-            </button>
-            <!--botao menu-->
-            <!--menu lateral-->
+                aria-expanded="false"><span id="hamburger"></span></button>
+
             <ul id="menu" role="menu">
-                <li id="id_home" class="menulista"><a href="">HOME</a></li>
-                <li class="menulista"><a href="">EMPRESAS</a></li>
 
-                <li class="CorSubMenu">
-                    <div><span id="btnCadastro">CADASTROS</span></div>
+                <div class="topo"></div>
 
-                    <!--submenu cadastro-->
-                    <div id="CadastroMenu">
-                        <ul>
-                            <li><a href="/" class="submenu">USUÁRIOS</a></li>
-                            <li><a href="/" class="submenu">FREQUÊNCIA</a></li>
-                            <li><a href="/" class="submenu">GRUPOS</a></li>
-                            <li><a href="/" class="submenu">ACESSOS</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <div>
 
-                <li class="CorSubMenu">
-                    <div><span id="btnFinanceiro">FINANCEIRO</span></div>
+                    <li class="DisplayMenu">
+                        <img src="img/menu/home.jpg" alt="home" width="25px" id="imgHome">
+                        <a href="">HOME</a>
+                    </li>
 
-                    <!--submenu financeiro-->
-                    <div id="FinanceiroMenu">
-                        <ul>
-                            <li><a href="/" class="submenu">CONTAS À RECEBER</a></li>
-                            <li><a href="/" class="submenu">DESPESAS</a></li>
-                        </ul>
-                    </div>
-                </li>
+                </div>
+
+                <div>
+                    <li class="DisplayMenu">
+                        <img src="img/menu/loja.png" alt="loja" width="25px" id="imgLoja">
+                        <a href="">EMPRESAS</a>
+                    </li>
+                </div>
+
+                <div>
+
+                    <li>
+
+                        <div class="DisplayCadastro">
+                            <img src="img/menu/cadastro.png" alt="cadastro" width="25px" id="imgCad">
+                            <div id="btnCadastro"><span>CADASTROS</span></div>
+                        </div>
+
+                        <!--submenu cadastro-->
+                        <div id="CadastroMenu">
+                            <ul>
+                                <li><a href="/">USUÁRIOS</a></li>
+                                <li><a href="/">FREQUÊNCIA</a></li>
+                                <li><a href="/">GRUPOS</a></li>
+                                <li><a href="/">ACESSOS</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+
+                </div>
 
 
-                <li class="CorSubMenu">
-                    <div><span id="btnRelatorio">RELATÓRIOS</span></div>
 
-                    <!--submenu financeiro-->
-                    <div id="RelatorioMenu">
-                        <ul>
-                            <li><a href="/" class="submenu">EMPRESAS</a></li>
-                            <li><a href="/" class="submenu">RECEBIMENTOS</a></li>
-                            <li><a href="/" class="submenu">DESPESAS</a></li>
-                            <li><a href="/" class="submenu">DEMOSTRATIVO DE LUCRO</a></li>
-                        </ul>
-                    </div>
-                </li>
-                
+                <div>
+
+                    <li>
+                        <div class="DisplayFinan">
+
+                            <img src="img/menu/receita.png" alt="financas" width="25px" id="imgFinan">
+                            <div><span id="btnFinanceiro">FINANCEIRO</span></div>
+
+                        </div>
+
+                        <!--submenu financeiro-->
+                        <div id="FinanceiroMenu">
+                            <ul>
+                                <li><a href="/">CONTAS À RECEBER</a></li>
+                                <li><a href="/">DESPESAS</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </div>
+
+
+                <div>
+
+                    <li>
+                        <div class="DisplayRelat">
+                            <img src="img/menu/relatorio.png" alt="relatorio" width="25px" id="imgRel">
+                            <div><span id="btnRelatorio">RELATÓRIOS</span></div>
+                        </div>
+
+                        <!--submenu financeiro-->
+                        <div id="RelatorioMenu">
+                            <ul>
+                                <li><a href="/">EMPRESAS</a></li>
+                                <li><a href="/">RECEBIMENTOS</a></li>
+                                <li><a href="/">DESPESAS</a></li>
+                                <li><a href="/">DEMOSTRATIVO DE LUCRO</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </div>
+
 
             </ul>
         </nav>
@@ -228,7 +272,7 @@
         </div>
 
     </form>
-    
+
 
     <!--formulario de perfil-->
     <form action="" class="modalPerfil">
@@ -257,38 +301,39 @@
             <input id="telefone_perfil" type="text" name="telefone_perfil" placeholder="N° TELEFONE" required />
         </div>
 
-        
+
         <div class="blockPerfil">
             <div><label for="cpf_perfil">CPF/CNPJ</label></div>
             <input id="cpf_perfil" type="text" name="cpf_perfil" placeholder="N° CPF/CNPJ" required />
         </div>
 
         <div>
-            <div class="blockPerfil">							
-                    <div><label>SENHA</label></div>
-                    <input type="password" id="senha_perfil" name="senha_perfil" placeholder="SENHA" required>							
+            <div class="blockPerfil">
+                <div><label>SENHA</label></div>
+                <input type="password" id="senha_perfil" name="senha_perfil" placeholder="SENHA" required>
             </div>
 
-            <div class="blockPerfil">							
-                    <div><label>CONFIRMAR SENHA</label></div>
-                    <input type="password" id="conf_senha_perfil" name="conf_senha_perfil" placeholder="CONFIRMAR SENHA" value="" required>							
+            <div class="blockPerfil">
+                <div><label>CONFIRMAR SENHA</label></div>
+                <input type="password" id="conf_senha_perfil" name="conf_senha_perfil" placeholder="CONFIRMAR SENHA"
+                    value="" required>
             </div>
         </div>
 
-        <div class="blockPerfil">							
+        <div class="blockPerfil">
             <div><label>ENDEREÇO</label></div>
-            <input type="text" id="endereco_perfil" name="endereco_perfil" placeholder="DIGITE SEU ENDEREÇO" >							
+            <input type="text" id="endereco_perfil" name="endereco_perfil" placeholder="DIGITE SEU ENDEREÇO">
         </div>
 
         <div>
-            <div class="GridPerfil">							
-                    <div><label>FOTO</label></div>
-                    <input type="file" name="foto_perfil" value=""  onchange="carregarImgPerfil()" id="foto_perfil">							
+            <div class="GridPerfil">
+                <div><label>FOTO</label></div>
+                <input type="file" name="foto_perfil" value="" onchange="carregarImgPerfil()" id="foto_perfil">
             </div>
 
-            <div class="">								
-                <img src=""  width="80px" id="target-usu">								
-                
+            <div class="">
+                <img src="" width="80px" id="target-usu">
+
             </div>
 
         </div>
@@ -298,11 +343,11 @@
         <div class="divSalvarPerfil">
 
             <div id="btnSalvarPerfil"><button type="submit">SALVAR</button></div>
-            
+
         </div>
 
     </form>
-    
+
     <script src="js/Botoes.js"></script>
 
 </body>

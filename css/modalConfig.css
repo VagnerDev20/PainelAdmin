@@ -70,7 +70,8 @@
   box-sizing: border-box;
   padding: 15px;
   font-size: 1.5rem;
-  background-color: #6959CD;
+ /* background-color: #6959CD;*/
+ background-image: linear-gradient(#0401b6, #00aeff);
 }
 
 .modal-title legend {
@@ -227,7 +228,7 @@ margin-top: 30px;
 }
 
 .divSalvarConfig button:hover {
-  background-color: #eba2f8;
+  background-color: #ffd4d4;
   transition: 0.3s;
   color: #000000;
 }
@@ -270,15 +271,15 @@ margin-top: 30px;
 }
 
 #foto-logo:hover {
-  background-color: #ff8af5;
+  background-color: #ffd4d4;
 }
 
 #foto-icone:hover {
-  background-color: #ff8af5;
+  background-color: #ffd4d4;
 }
 
 #foto-logo-rel:hover {
-  background-color: #ff8af5;
+  background-color: #ffd4d4;
 }
 
 @media (max-width: 1000px) {

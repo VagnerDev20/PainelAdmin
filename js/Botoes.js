@@ -18,16 +18,34 @@ function dropdownIconRotated() {
 dropdownIcon.addEventListener("click", dropdownIconRotated);
 //*****************************************************************************
 
-// *********MENU PRINCIPAL***************
-// botao menu principal
-const btnMobile = document.getElementById("btn-mobile"); // pega o elemento pelo id
 
+
+// Seleciona o botão de menu mobile pelo ID
+const btnMobile = document.getElementById("btn-mobile");
+
+// Define a função de alternância de menu
 function toggleMenu(event) {
-  if (event.type === "touchstart") event.preventDefault(); // execulta o touch do android não executa o evento click
+  // Evita que o toque no menu dispare o evento click
+  if (event.type === "touchstart") {
+    event.preventDefault();
+  }
+  
+  // Seleciona o elemento HTML do menu pelo ID
   const nav = document.getElementById("nav");
-  nav.classList.toggle("active"); // toggle remove a classe 'active' se tiver adicina se não tiver
+  
+  // Adiciona ou remove a classe "active" no menu
+  nav.classList.toggle("active");
+  cadastroMenu.classList.remove('show');
+  financeiromenu.classList.remove('show');
+  relatoriomenu.classList.remove('show');
+  
+  // Verifica se a classe "active" está presente no menu
   const active = nav.classList.contains("active");
+  
+  // Altera o atributo "aria-expanded" do botão do menu
   event.currentTarget.setAttribute("aria-expanded", active);
+  
+  // Altera o texto alternativo do botão do menu com base na classe "active"
   if (active) {
     event.currentTarget.setAttribute("aria-label", "Fechar Menu");
   } else {
@@ -35,8 +53,13 @@ function toggleMenu(event) {
   }
 }
 
+// Adiciona um listener de evento de clique no botão de menu móvel
 btnMobile.addEventListener("click", toggleMenu);
+
+// Adiciona um listener de evento de toque no botão de menu móvel para dispositivos móveis
 btnMobile.addEventListener("touchstart", toggleMenu);
+
+
 //*****************************************************************************
 
 
@@ -183,8 +206,5 @@ function FecharFrmPerfil(){
   closeModalPerfil();
 }
 btnClosePerfil.addEventListener('click', FecharFrmPerfil);
-
-
-
 
 
